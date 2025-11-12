@@ -1,7 +1,9 @@
-function TalbleFill(tableId) {
+function TableFill(tableId) {
     const table = document.getElementById(tableId);
-    var width = parseInt(document.getElementById('szelesseg').value);
-    var height = parseInt(document.getElementById('magassag').value);
+    const widthInput = document.getElementById('szelesseg');
+    const heightInput = document.getElementById('magassag');
+    var width = parseInt(widthInput.value);
+    var height = parseInt(heightInput.value);
     table.innerHTML = ''; 
 
     for (let i = 0; i < height; i++) {
@@ -13,8 +15,9 @@ function TalbleFill(tableId) {
         table.appendChild(row);
     }
 }
-document.addEventListener('DOMContentLoaded', () => {
-    tableFill('player');
-    tableFill('ai');
-});
 
+const button = document.querySelector('input[type="button"]');
+button.addEventListener('click', function() {
+    TableFill('player');
+    TableFill('ai');
+});

@@ -1,3 +1,50 @@
 body{
     background-color: aquamarine;
 }
+table{
+    margin-top: 20px;
+    margin-right: 20px;
+    display: inline-block;
+
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    
+}
+td{
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+}
+h1{
+    text-align: center;
+}
+div{
+    text-align: center;
+}
+input{
+    margin: 5px;
+}
+button{
+    margin-left: 10px;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+}
+input[type="number"]{
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    text-align: center;
+}   
+input[type="button"]{
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[type="button"]:hover{
+    background-color: lightgray;
+}
