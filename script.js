@@ -23,12 +23,28 @@ function TableFill(tableId) {
                     } else {
                         cell.classList.add('miss');
                     }
+                    if (tableId === 'ai') {
+                        setTimeout(botMove, 500);
+                    }
                 }
             });
             row.appendChild(cell);
         }
         table.appendChild(row);
     }
+}
+
+function botMove() {
+    const playerTable = document.getElementById('player');
+    const cells = Array.from(playerTable.getElementsByTagName('td'));
+    const available = cells.filter(cell =>
+        !cell.classList.contains('hit') && !cell.classList.contains('miss')
+    );
+
+    if (available.length === 0) return;
+
+    const randomCell = available[Math.floor(Math.random() * available.length)];
+    randomCell.click();
 }
 
 const button = document.querySelector('input[type="button"]');
